@@ -1,3 +1,5 @@
+using System.ComponentModel.Design;
+
 namespace proj
 {
 	internal class session_04
@@ -15,8 +17,8 @@ namespace proj
 		public static void Exercise1()
 		{
 			Console.Write("first num a= ");
-			double a=double.Parse(Console.ReadLine());
-			Console.Write("first num b= ");
+            double a = double.Parse(Console.ReadLine());
+			Console.Write("second num b= ");
 			double b = double.Parse(Console.ReadLine());
 			double sum = a + b;
 			Console.WriteLine($"{a}+{b}={sum}");
@@ -69,7 +71,34 @@ namespace proj
         }
         public static void Exercise5()
 		{
-            Console.WriteLine(	);
+            Console.WriteLine("enter a character"	);
+			char input = Console.ReadKey().KeyChar;
+			if (char.IsLetter(input))
+			{
+				switch(char.ToUpper(input)) 
+				{
+					case 'A':
+                    case 'E':
+                    case 'I':
+                    case 'O':
+                    case 'U':
+                        Console.WriteLine($"{input} is a vowel.");
+						break;
+					default: 
+						Console.WriteLine($"{input} is a consonant.");
+						break;
+                }
+				else if (char.IsDigit(input))
+				{
+                    Console.WriteLine($"{input} is a digit.");
+
+                }
+				else
+				{
+                    Console.WriteLine($"{input} is a symbol.");
+                }
+
+            }
         }
 
 }
