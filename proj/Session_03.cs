@@ -9,7 +9,7 @@ namespace proj
 {
     internal class Session_03
     {
-        public static void Main(string[] args)
+        public static void Main3(string[] args)
         {
             //Ex_01();
             //Ex_02();
