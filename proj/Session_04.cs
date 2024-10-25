@@ -75,31 +75,32 @@ namespace proj
 			char input = Console.ReadKey().KeyChar;
 			if (char.IsLetter(input))
 			{
-				switch(char.ToUpper(input)) 
+				switch (char.ToUpper(input))
 				{
 					case 'A':
-                    case 'E':
-                    case 'I':
-                    case 'O':
-                    case 'U':
-                        Console.WriteLine($"{input} is a vowel.");
+					case 'E':
+					case 'I':
+					case 'O':
+					case 'U':
+						Console.WriteLine($"{input} is a vowel.");
 						break;
-					default: 
+					default:
 						Console.WriteLine($"{input} is a consonant.");
 						break;
-                }
-				else if (char.IsDigit(input))
-				{
-                    Console.WriteLine($"{input} is a digit.");
+				}
+			}
+			else if (char.IsDigit(input))
+			{
+				Console.WriteLine($"{input} is a digit.");
 
-                }
-				else
-				{
-                    Console.WriteLine($"{input} is a symbol.");
-                }
+			}
+			else
+			{
+				Console.WriteLine($"{input} is a symbol.");
+			}
 
             }
         }
 
 }
-}
+
