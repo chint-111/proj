@@ -1,4 +1,5 @@
 using System.ComponentModel.Design;
+using System.Net.Security;
 
 namespace proj
 {
@@ -10,7 +11,8 @@ namespace proj
 			//Exercise2();
 			//Exercise3();
 			//Exercise4();
-			Exercise5();
+			//Exercise5();
+			Exercise6();
 			Console.WriteLine("Press any key to stop");
 			Console.ReadKey();
 		}
@@ -101,6 +103,19 @@ namespace proj
 
             }
         }
+    public static void Exercise6()
+	{
+        Console.WriteLine("enter a number=");
+		double n = double.Parse(Console.ReadLine());
+		if (n / 2 == 0)
+		{
+			Console.WriteLine($"{n} is even");
+		}
+		else Console.WriteLine($"{n} is odd.");
+
+    }
+
+
 
 }
 
