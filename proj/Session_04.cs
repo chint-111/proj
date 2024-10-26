@@ -292,7 +292,24 @@ namespace proj
 		}
         public static void Exercise15()
 		{
-
+            Console.Write("enter a number: ");
+			int a= int.Parse(Console.ReadLine());
+			int d = 0;
+			for (int i = 1;i<=a;i++)
+			{
+				if (a%i==0)
+				{
+					d++;
+				}
+			}
+			if (d == 2)
+			{
+				Console.WriteLine("this is a prime number");
+			}
+			else
+			{
+				Console.WriteLine("This is not a prime number");
+			}
 		}
     }
 
