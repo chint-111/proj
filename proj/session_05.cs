@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace proj
 {
     internal class session_05
@@ -6,40 +8,44 @@ namespace proj
         {
             //Exercise1();
             //Exercise2();
-            //Exercise3();
+            Exercise3();
             //Exercise4();
             //Exercise5();
-            Exercise6();
+            //Exercise6();
             Console.WriteLine("Press any key to stop");
             Console.ReadKey();
         }
         public static void Exercise1()
         {
-            Console.WriteLine("Enter 3 number: ");
-            double a = double.Parse(Console.ReadLine());
-            double b = double.Parse(Console.ReadLine());
-            double c = double.Parse(Console.ReadLine());
-            double d = Math.Max(a, Math.Max(b, c));
-            Console.WriteLine($"The max num: {d}");
+            int a = 3, b = 6, c = 5;
+            int max = MaxOfThree(a, b, c);
+            Console.WriteLine(max);
         }
+        public static int MaxOfThree(int a, int b)
+            {
+                return a > b ? a : b;
+            }
+        public static int MaxOfThree(int a, int b,int c)   
+            {
+            return MaxOfThree(MaxOfThree(a, b), c);
+            }
+        
         public static void Exercise2()
         {
-            Console.Write("Enter a non-negative integer: ");
-            int a=int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the number= ");
+            int n=int.Parse(Console.ReadLine());
+            Console.WriteLine("The factorial number= ");
+            int f = Factorial(n);
+            Console.WriteLine($"The factorial of {n} is {f}");
+        }
+        public static int Factorial(int n)
+        {
             int f = 1;
-            if (a < 0)
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine("Plz Enter a non-negative integer");
+                f *= i;
             }
-            else
-            {
-                for (int i = 1; i <= a; i++)
-                {
-                    f *= i;
-                }
-                Console.WriteLine($"Factorial of {a} is {f}");
-
-            }
+            return f;
         }
         public static void Exercise3()
         {
@@ -63,7 +69,7 @@ namespace proj
 
             }
         }
-        public static void Exercise4()
+        public  void Exercise4()
         {
             Console.WriteLine("enter the num: ");
             int n = int.Parse(Console.ReadLine());
@@ -108,7 +114,7 @@ namespace proj
                 b++;
             }
         }
-        public static void Exercise5()
+        public  void Exercise5()
         {
             Console.WriteLine("enter a number: ");
             int n = int.Parse(Console.ReadLine());
@@ -134,7 +140,7 @@ namespace proj
                 Console.WriteLine("Not perfect.");
             }
         }
-        public static void Exercise6()
+        public  void Exercise6()
         {
 
         }
