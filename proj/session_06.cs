@@ -11,7 +11,8 @@ namespace proj
         private static void Main (string[] args )
         {
             //Exercise01();
-            Exercise02();
+            //Exercise02();
+            Exercise03();
             Console.WriteLine("Press any key to stop");
             Console.ReadKey();
         }
@@ -73,11 +74,12 @@ namespace proj
             Random ran=new Random();
             for(int i = 0;i< a.Length;i++)
             {
-                a[i] = ran.Next();
+                a[i] = ran.Next(100);
             }
         }
         static void In(int[] a)
         {
+            Console.WriteLine("Random vars: ");
             foreach (int item in a)
             {
                 Console.Write($"{item}, ");
@@ -86,14 +88,18 @@ namespace proj
         }
         public static void Average(int [] a)
         {
-            int sum = 0; int count = 0;
+            int sum = 0; 
+            int count = a.Length;
             foreach(int item in a)  
             {
-                sum += a[item];
-                count++;
+                sum += item;
             }
             double average = sum / count;
-            Console.WriteLine($"The average : {average}");
+            Console.WriteLine($"The average : {average:F2}");
+        }
+        public static void Exercise03()
+        {
+
         }
     }
 }

@@ -11,8 +11,8 @@ namespace proj
             //Exercise2();
             //Exercise3();
            //Exercise4();
-            Exercise5();
-            //Exercise6();
+            //Exercise5();
+            Exercise6();
             Console.WriteLine("Press any key to stop");
             Console.ReadKey();
         }
@@ -158,9 +158,27 @@ namespace proj
             Console.WriteLine();
 
         }
-        public  void Exercise6()
+        public static void Exercise6()
         {
-
+            Console.WriteLine("Enter a string to check whether it is a pangram or not: ");
+            string input = Console.ReadLine();
+            bool result = isPangram(input);
+            Console.WriteLine($"IS the input a pangram? {result}");
         }
+        public static bool isPangram(string input)
+        {
+            if(input == null|| input==" ")
+                return false;
+            string lowercase=input.ToLower();
+            for (char letter='a'; letter<='z'; letter++)
+            {
+                if(!lowercase.Contains(letter))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
     }
 }
