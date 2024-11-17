@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,15 +9,17 @@ namespace proj
 {
     internal class session_06
     {
-        private static void Main(string[] args)
+        private static void Main6(string[] args)
         {
             //Exercise01();
             //Exercise02();
             //Exercise03();
-            //Exercis04();
+            //Exercise04();
             //Exercise05();
             //Exercise06();
-            Exercise07();
+            //Exercise07();
+            //Exercise08();
+            //Exercise09();
             Console.WriteLine("Press any key to stop");
             Console.ReadKey();
         }
@@ -151,7 +154,7 @@ namespace proj
              }
              return false;
          }
-        public static void Exercis04()
+        public static void Exercise04()
          {
              Console.WriteLine("Enter the number of array: ");
              int n=int.Parse( Console.ReadLine() );
@@ -264,7 +267,7 @@ namespace proj
 
             }
             return newArray;
-        }*/
+        }
         public static void Exercise06()
         {
             Console.WriteLine("Enter the number of array: ");
@@ -291,7 +294,7 @@ namespace proj
             }
             Console.WriteLine();
         }
-        /*static void FindMaxMin(int[]a)
+        static void FindMaxMin(int[]a)
         {
             int max = a[0];
             int min = a[0];
@@ -309,6 +312,154 @@ namespace proj
             Console.WriteLine($"Maximum value: {max}");
             Console.WriteLine($"Minimun value: {min}");
         }*/
+        /*public static void Exercise07()
+        {
+            Console.Write("Enter the number of array: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] a = new int[n];
+            Bnn(a);
+            In(a);
+            Reverse(a);
+            Console.WriteLine("Reversed array: ");
+            In(a);
+        }
+        static void Bnn(int[] a)
+        {
+            Random random = new Random();
+            for (int i=0;i<a.Length; i++)
+            {
+                a[i] = random.Next(100);
+
+            }
+        }
+        static void In(int[] a)
+        {
+            Console.WriteLine("Values of array: ");
+            foreach (int item in a)
+            {
+                Console.Write(item + " ");              
+            }
+            Console.WriteLine();
+        }
+        static void Reverse(int[] a)
+        {
+            int left = 0;
+            int right=a.Length-1;
+            while(left<right)
+            {
+                int temp = a[left];
+                a[left] = a[right];
+                a[right] = temp;
+
+                left++;
+                right--;
+            }
+        }
+        public static void Exercise08()
+        {
+            Console.Write("Enter the number of array: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] a = new int[n];
+            Bnn(a);
+            In(a);
+
+            FindDuplicates(a);
+ 
+        }
+        static void Bnn(int[] a)
+        {
+            Random random = new Random();
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = random.Next(100);
+
+            }
+        }
+        static void In(int[] a)
+        {
+            Console.WriteLine("Values of array: ");
+            foreach (int item in a)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+        }
+        static void FindDuplicates(int[]a)
+        {
+            bool found= false;
+            for (int i = 0;i < a.Length-1;i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (a[i] == a[j])
+                    {
+                        Console.WriteLine("Duplicate found is: " + a[i]);
+                        found = true;
+                    }
+                }
+            }
+            if (!found)
+            {
+                Console.WriteLine("No duplicates found yet");
+            }
+        }*/
+        public static void Exercise09()
+        {
+            Console.Write("Enter the number of array: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] a = new int[n];
+            Bien(a);
+            Inmang(a);
+
+            int[]uniqueArray=RemoveDup(a);
+            Console.WriteLine("Array after removing duplicates: ");
+            Inmang(uniqueArray);
+        }
+             
+        static void Bien(int[] a)
+            {
+                Random random = new Random();
+                for (int i = 0; i < a.Length; i++)
+                {
+                    a[i] = random.Next(100);
+
+                }
+            }
+        static void Inmang(int[] a)
+            {
+                foreach (int item in a)
+                    {
+                        Console.Write(item + " ");
+                    }
+                Console.WriteLine();
+            }
+        static int[] RemoveDup(int[] a)
+        {
+            int[] temp = new int[a.Length];
+            int index = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                bool isDuplicate = false;
+                for(int j = 0;j<i;j++)
+                {
+                    if (a[i]== a[j])
+                    {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if(!isDuplicate)
+                {
+                    temp[index] = a[i];
+                    index++;
+                }
+            }
+            int[] result = new int[index];
+            Array.Copy(temp, result, index);
+            return result;
+            
+        }
        
+        
     }
 }
