@@ -9,7 +9,7 @@ namespace proj
 {
     internal class session6_
     {
-        static void Main(string[] args)
+        static void Main66(string[] args)
         {
             Console.WriteLine("Enter the number of rows: ");
             int row = int.Parse(Console.ReadLine());
