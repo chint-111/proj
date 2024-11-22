@@ -9,7 +9,7 @@ namespace proj
 {
     internal class session07
     {
-        static void Main(string[] args)
+        static void Main7(string[] args)
         {
             //Exercise1();
             //Exercise2();
