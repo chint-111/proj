@@ -8,7 +8,7 @@ namespace proj
 {
     internal class session12
     {
-        static void Main(string[] args)
+        static void Main12(string[] args)
         {
             Console.WriteLine("Enter the number:");
             int n=int.Parse(Console.ReadLine());
