@@ -8,7 +8,7 @@ namespace proj
 {
     internal class session_08
     {
-        static void Main(string[] args)
+        static void Main8(string[] args)
         {
             Console.WriteLine("Enter the first string:");
             string s1 = Console.ReadLine().ToLower();

@@ -8,10 +8,10 @@ namespace proj
 {
     internal class Session_02
     {
-        public static void Main1(string[] args)
+        public static void Main2(string[] args)
         {
             //Question_01();
-            //Question_02();
+            Question_02();
             //Question_03();
             //Question_04();
             //Question_05();
@@ -19,7 +19,7 @@ namespace proj
             //Question_07();
             //Question_08();
             //Question_09();
-            Question_10();
+            //Question_10();
 
             Console.WriteLine("Press any key to stop");
             Console.ReadKey();
@@ -49,9 +49,7 @@ namespace proj
             int a = int.Parse(Console.ReadLine());
             Console.Write("Enter the second variable b=");
             int b = int.Parse(Console.ReadLine());
-            int temp = a;
-            a = b;
-            b = temp;
+            (a, b) = (b, a);
             Console.WriteLine($"The first variable after swaping: {a}");
             Console.WriteLine($"The second variable after swaping: {b}");
             Console.ReadKey();
